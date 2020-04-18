@@ -1,10 +1,15 @@
-@import 'vars'
-
-pre
-  color: #0000ff
-  font-size: 2rem
-
-body
+//reset
+html, body
   height: 100%
-  background-color: #aaaa
-  font-size: 16px
+  font-family: $font-family
+body
+  font-size: $font-size-body
+*
+  box-sizing: border-box
+
+
+.container
+  display: block
+  width: 100%
+  max-width: $container-maxw
+  margin: auto

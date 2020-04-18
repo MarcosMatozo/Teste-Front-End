@@ -7,7 +7,7 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        //Global sass
+        //Global sass variables
         data: '@import "@/sass/_vars.sass"'
        //  data: `
        //   @import "@/sass/main.sass";
