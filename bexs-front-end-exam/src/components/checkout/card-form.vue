@@ -80,12 +80,14 @@ export default {
       margin-bottom: 62px
     .validate-form
       margin: 62px 0 0
+      width: 55.9%
 
   @media (max-width: 929px)
     label
       margin-bottom: 44px
     .validate-form
       margin: 45px 0 0
+      width: 100%
 
   label
     width: 100%
@@ -143,7 +145,6 @@ export default {
 
   .validate-form
     float: right
-    width: 55.9%
     border-radius: 10px
     background-color: $main-color
     border: none
