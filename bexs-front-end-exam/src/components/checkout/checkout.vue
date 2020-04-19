@@ -16,6 +16,14 @@ export default {
   name: 'checkout',
   components: {
     checkoutValidator
+  },
+  data: function(){
+    return {
+
+    }
+  },
+  computed: {
+
   }
 }
 </script>

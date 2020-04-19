@@ -1,4 +1,4 @@
-<template>
+<template >
   <div id="app">
 
     <headerC/>
@@ -11,12 +11,32 @@ import 'reset-css'
 import mainCheckout from './components/checkout/checkout.vue'
 import headerC from './components/header/header.vue'
 
+import { eventBus } from './main';
+
+//Event bus
+// eventBus.$on('i-got-clicked', isBlank => {
+//   console.log('Type State', isBlank)
+// });
+
 //local register
 export default {
-  name: 'bexs_test',
+  data: function(){
+    return {
+      //Steps
+      stepCheckout: 0
+    }
+  },
+  methods: {
+    evBStepCheckout: function(){
+      eventBus.$emit('step-checkout', this.stepCheckout )
+    }
+  },
   components: {
     mainCheckout,
     headerC
+  },
+  mounted: function(){
+    this.evBStepCheckout();
   }
 }
 </script>

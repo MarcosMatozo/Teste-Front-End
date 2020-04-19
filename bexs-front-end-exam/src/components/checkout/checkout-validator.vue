@@ -1,19 +1,19 @@
 <template>
 
-  <div class="checkout-validator">
-    <div class="checkout-validator-left">
-      <div class="left-infos">
-        <leftTxts/>
-        <customCard/>
+  <div class="">
+    <div class="checkout-validator">
+      <div class="checkout-validator-left">
+        <div class="left-infos">
+          <leftTxts/>
+          <customCard/>
+        </div>
       </div>
-      <div class="right-infos">
+      <div class="checkout-validator-right">
         <stepTitles/>
         <cardForm/>
       </div>
     </div>
-    <div class="checkout-validator-right">
-      <purchaseDetails/>
-    </div>
+    <purchaseDetails/>
   </div>
 </template>
 
@@ -28,7 +28,6 @@ import cardForm from './card-form.vue'
 import purchaseDetails from './checkout-purchase-details.vue'
 
 export default {
-  name: 'checkout-validator',
   components: {
     customCard,
     leftTxts,
@@ -54,9 +53,8 @@ export default {
       color: #fff
   &-right
     width: 65.625%
-    height: 500px
-    background: orange
+    height: 596px
+    background: #fff
+    padding: 50px 64px 50px 168px
 
-  .right-infos
-    display: none
 </style>

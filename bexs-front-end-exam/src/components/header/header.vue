@@ -37,6 +37,7 @@ header, .inner-header
 header
   border-bottom: 0.5px solid #F7F7F7
   height: 9.04vh
+  min-height: 91px
   .inner-header
     padding: 24px 0
   .logo
