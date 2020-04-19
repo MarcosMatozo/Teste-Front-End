@@ -62,15 +62,40 @@ export default {
   display: inline-block
   vertical-align: top
   position: relative
-  margin: 30px 0 0
   padding: 35px 24px 0 26px
   background: url('../../assets/img/elements/card-bg-empty.svg') no-repeat center
+  background-size: 100%
   z-index: 999999
-  width: 133.82%
   height: 223px
   border-radius: 10px
+  @media ( min-width: 930px )
+    width: 133.82%
+    margin: 30px 0 0
+    p.card-
+      &number
+        margin: 48px 0 33px
+      &name, &valid
+        font-size: 1rem
+  @media ( max-width: 929px )
+    width: 80%
+    margin: 15px 0 0
+    p.card-
+      &number
+        margin: 78px 0 25px
+      &name, &valid
+        font-size: .75rem
+  @media ( min-width: 1366px )
+    min-height: 223px
+  @media ( max-width: 929px )
+    min-height: 172px
+    padding: 0 14px
+    max-width: 350px
+    max-height: 172px
+    &:not(.onType)
+      .card-flag
+        display: none
 
-  //Empty form styles
+  /* Empty form styles 1,1875 */
   &:not(.onType)
     .card-flag
       background: none
@@ -101,14 +126,12 @@ export default {
   p.card-
     &number
       width: 100%
-      margin: 48px 0 33px
       letter-spacing: 2.31px
-      text-shadow: 0px 1px 2px #000000B3
+      text-shadow: 0 1px 2px #000000B3
       font-size: 1.375rem
       font-weight: 100
     &name
-      font-size: 1rem
-      text-shadow: 0px 1px 2px #000000B3
+      text-shadow: 0 1px 2px #000000B3
       letter-spacing: 0
       float: left
       text-transform: uppercase

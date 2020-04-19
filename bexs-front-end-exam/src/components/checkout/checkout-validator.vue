@@ -43,18 +43,48 @@ export default {
   display: inline-block
   vertical-align: top
 .checkout-validator
-  width: 74.964%
   &-left
-    width: 34.375%
     background-color: $main-color
-    padding: 50px 16px 0 64px
-    min-height: 596px
     p
       color: #fff
   &-right
-    width: 65.625%
-    height: 596px
     background: #fff
-    padding: 50px 64px 50px 168px
+
+.checkout-validator
+  @media ( max-width: 929px )
+    &-left
+      width: 100%
+      text-align: center
+      height: 239px
+      padding: 40px 0 113px
+    &-right
+      width: 100%
+      height: 725px
+      padding: 114px 40px 40px
+  @media ( min-width: 930px )
+    &-left
+      width: 34.375%
+      min-height: 596px
+    &-right
+      width: 65.625%
+      height: 596px
+  @media ( min-width: 1024px )
+    width: 74.964%
+    min-width: 1024px
+  @media ( max-width: 1023px )
+    width: 100%
+  @media ( min-width: 1366px )
+    &-left
+      padding: 50px 1.56% 0 6.25%
+    &-right
+      padding: 50px 64px 50px 168px
+  @media ( max-width: 1365px )
+    display: block
+    margin: 0 auto
+  @media ( max-width: 1365px ) and (min-width: 930px)
+    &-left
+      padding: 50px 1.56% 0 2%
+    &-right
+      padding: 50px 64px 50px 120px
 
 </style>

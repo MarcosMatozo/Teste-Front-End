@@ -36,16 +36,25 @@ header, .inner-header
   width: 100%
 header
   border-bottom: 0.5px solid #F7F7F7
-  height: 9.04vh
-  min-height: 91px
   .inner-header
     padding: 24px 0
   .logo
     float: left
+  @media (min-width: 621px )
+    height: 9.04vh
+    min-height: 91px
+    .menu
+      float: right
+      width: 46.853%
+  @media (max-width: 620px )
+    .logo, .menu
+      width: 100%
+      text-align: center
+    .menu
+      display: inline-block
+      vertical-align: top
 
   .menu
-    float: right
-    width: 46.853%
     padding: 12px 0
     li
       display: inline-block

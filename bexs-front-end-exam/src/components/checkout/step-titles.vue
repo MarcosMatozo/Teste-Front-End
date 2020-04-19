@@ -11,7 +11,7 @@
 
 <script>
 
-import { eventBus } from '../../main';
+
 
 export default {
   data: function(){
@@ -29,11 +29,7 @@ export default {
 
   },
   mounted: function(){
-    //Event bus
-    //step
-    eventBus.$on('step-checkout', stepCheckout => {
-      this.stepCheckout = stepCheckout;
-    });
+
   }
 }
 
@@ -46,6 +42,9 @@ export default {
   display: inline-block
   vertical-align: top
   width: 100%
+  @media (max-width: 929px)
+    display: none
+
 .step-titles
   margin: 0 0 71px
   ul

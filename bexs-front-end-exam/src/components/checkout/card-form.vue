@@ -75,9 +75,20 @@ export default {
     font-weight: 100
     font-size: 1.0625rem
 
+  @media (min-width: 930px)
+    label
+      margin-bottom: 62px
+    .validate-form
+      margin: 62px 0 0
+
+  @media (max-width: 929px)
+    label
+      margin-bottom: 44px
+    .validate-form
+      margin: 45px 0 0
+
   label
     width: 100%
-    margin-bottom: 62px
     height: 26px
     &.card-valid-num, &.card-cvv-num
       width: 48.18%
@@ -132,7 +143,6 @@ export default {
 
   .validate-form
     float: right
-    margin: 62px 0 0
     width: 55.9%
     border-radius: 10px
     background-color: $main-color

@@ -23,7 +23,10 @@ export default {
   data: function(){
     return {
       //Steps
-      stepCheckout: 0
+      stepCheckout: {
+        currentStep : 0,
+        stepCheckoutMax: 3
+      },
     }
   },
   methods: {
