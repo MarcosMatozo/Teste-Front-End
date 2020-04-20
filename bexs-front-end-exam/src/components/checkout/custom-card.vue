@@ -19,14 +19,14 @@
 
 
 <script>
-
+import { eventBus } from './../../main';
 
 export default {
   components: {
 
   },
   props:{
-    clientNumberCard: {
+    clientNumberCard2: {
       type: String,
       default: '**** **** **** ****'
     },
@@ -42,6 +42,7 @@ export default {
   data: function(){
     return {
       isBlank : true,
+      clientNumberCard: ''
     }
   },
   methods: {
@@ -53,6 +54,12 @@ export default {
     onType: function(){
       return this.isBlank
     }
+  },
+  mounted: function(){
+    eventBus.$on('cardNumber', data => {
+      console.log('BUS', data);
+      console.log('this', this);
+    })
   }
 }
 </script>

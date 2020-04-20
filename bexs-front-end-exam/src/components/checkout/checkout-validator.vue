@@ -10,7 +10,7 @@
       </div>
       <div class="checkout-validator-right">
         <stepTitles/>
-        <cardForm/>
+        <cardForm />
       </div>
     </div>
     <purchaseDetails/>
@@ -26,6 +26,7 @@ import leftTxts from './left-card-texts.vue'
 import stepTitles from './step-titles.vue'
 import cardForm from './card-form.vue'
 import purchaseDetails from './checkout-purchase-details.vue'
+import { eventBus } from './../../main';
 
 export default {
   components: {
@@ -34,6 +35,18 @@ export default {
     stepTitles,
     cardForm,
     purchaseDetails
+  },
+  // methods: {
+  //   passCustomCard: function(){
+  //     eventBus.$emit('customNumber', '' )
+  //   }
+  // },
+  mixins: {
+    data: function () {
+        return {
+            eventBus: eventBus
+        }
+    }
   }
 }
 </script>

@@ -21,9 +21,6 @@ export default {
     return {
 
     }
-  },
-  computed: {
-
   }
 }
 </script>
